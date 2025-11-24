@@ -1,0 +1,29 @@
+<style rel="stylesheet" href="style.css">
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Event</title>
+</head>
+<body>
+
+<h2>Update Event</h2>
+
+<form method="POST">
+    <label>ID:</label>
+    <input type="text" name="event_id" value="{{ event.event_id }}" required><br><br>
+
+    <label>Event title:</label>
+    <input type="text" name="title" value="{{ event.title }}" required><br><br> 
+    <label>Start Time:</label>
+    <input type="text" name="start_time" value="{{ event.start_time }}" required><br><br>
+    <label>End Time:</label>
+    <input type="text" name="end_time" value="{{ event.end_time }}" required><br><br>
+    <label>Description:</label>
+    <input type="text" name="description" value="{{ event.description }}" required><br><br>
+
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

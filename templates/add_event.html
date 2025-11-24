@@ -1,0 +1,26 @@
+
+<link rel="stylesheet" href="/static/style.css">
+<h2 class="page-heading">Add New Event</h2>
+
+<form method="POST">
+
+<label class="form-label">Title:</label><br>
+<input type="text" name="title" required>
+<br><br>
+<label class="form-label">Start Time:</label><br>
+<input type="datetime-local" name="start_time" required>
+<br><br>
+<label class="form-label">End Time:</label><br>
+<input type="datetime-local" name="end_time" required>
+<br><br>
+<label class="form-label">Description:</label><br>
+<textarea name="description" rows="4"></textarea>
+<br><br>
+<button type="submit">Save Event</button>
+
+</form>
+
+
+<br>
+<a class="btn" href="/events"> Back to Events</a><br>
+<a class="btn" href="/"> Back to Home</a>

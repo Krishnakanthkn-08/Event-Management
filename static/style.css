@@ -1,0 +1,155 @@
+
+    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    ;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #170505;
+    font-size: 40px;  /* Increase size */
+    font-weight: bold;
+}
+
+a {
+            margin-top: 25px;
+            display: inline-block;
+            text-decoration: none;
+            background: #34495e;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background: #2c3e50;
+        }
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+}
+
+table th {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+input, select, textarea {
+    width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}/*
+   body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background-image: url('/static/background2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+    text-align: center;
+    }
+    */
+ .btn {
+        display: flexbox;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 100px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+    
+ }
+.form-label {
+    font-size: 25px;      /* Increase label size */
+    font-weight: bold;
+    color: #170505;
+    display: block;
+    margin-bottom: 5px;
+}
+/* Hidden checkbox */
+.popup-toggle {
+    display: none;
+}
+
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup box */
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid red;
+    color: red;
+}
+
+/* Close button */
+.close-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* When checkbox is checked → hide popup */
+#close-popup:checked ~ .popup-overlay {
+    display: none;
+}
+

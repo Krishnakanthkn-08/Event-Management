@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<h2>Allocate Resource to Event</h2>
+
+<!-- ⭐ POPUP SHOULD BE HERE (OUTSIDE SELECT) ⭐ -->
+{% if message %}
+<input type="checkbox" id="close-popup" class="popup-toggle">
+
+<div class="popup-overlay">
+    <div class="popup-box">
+        {{ message }}
+
+        <!-- Close button -->
+        <label for="close-popup" class="close-btn">Close</label>
+    </div>
+</div>
+{% endif %}
+
+
+<form method="POST">
+
+    <label>Select Event:</label><br>
+    <select name="event_id" required>
+        {% for e in events %}
+            <option value="{{ e.event_id }}">{{ e.title }}
+                 ({{ e.start_time }} - {{ e.end_time }})</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <label>Select Resource:</label><br>
+    <select name="resource_id" required>
+        {% for r in resources %}
+            <option value="{{ r.resource_id }}">{{ r.resource_name }} ({{ r.resource_type }})</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <button type="submit">Allocate</button>
+
+</form>
+
+<a class="btn" href="/">⬅ Back to Home</a>
+
+<br>
+
+<!-- ⭐ REPORT TABLE ⭐ -->
+<h2>Current Allocations</h2>
+
+{% if reports %}
+<table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; text-align:center;">
+    <thead>
+        <tr>
+            <th>Event ID</th>
+            <th>Title</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Resource Name</th>
+            <th>Resource Type</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for r in reports %}
+        <tr>
+            <td>{{ r.event_id }}</td>
+            <td>{{ r.title }}</td>
+            <td>{{ r.start_time }}</td>
+            <td>{{ r.end_time }}</td>
+            <td>{{ r.resource_name }}</td>
+            <td>{{ r.resource_type }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No allocations yet.</p>
+{% endif %}

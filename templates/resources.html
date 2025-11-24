@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<h2>All Resources</h2>
+
+<a href="/add_resource">Add New Resource</a>
+<br><br>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Resource Name</th>
+        <th>Resource Type</th>
+        <th>Action</th>
+    </tr>
+
+    {% for r in resources %}
+    <tr>
+        <td>{{ r.resource_id }}</td>
+        <td>{{ r.resource_name }}</td>
+        <td>{{ r.resource_type }}</td>
+        <td>
+             <a href="/update_resource/{{ r.resource_id }}">Update</a>
+            <a href="/delete_resource/{{ r.resource_id }}">Delete</a>
+           
+        </td>
+        
+            
+     
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a class="btn" href="/">⬅ Back to Home</a>

@@ -15,7 +15,8 @@ This project is ideal for **college submissions, internships, resumes, and portf
 ![Home Screenshot]()
 
 ### 📅 Events Page
-![Events Screenshot]()
+![Events Screenshot](<img width="1907" height="1014" alt="image" src="https://github.com/user-attachments/assets/e5e8e404-ead9-460c-bc0e-493be967e104" />
+)
 
 ### 🧰 Resources Page
 ![Resources Screenshot](/mnt/data/4f4708eb-a876-47f9-b79f-aedc910b6935.png)

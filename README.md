@@ -1,6 +1,6 @@
-# 🎯 Event Management & Resource Allocation Web App
+# Event Management & Resource Allocation Web App
 
-## 📌 Overview
+##  Overview
 This is a **Flask-based Event & Resource Management Web App** that allows users to manage events, resources, and allocations.  
 It includes **CRUD functionalities**, conflict-free scheduling, clean UI, and a simple reporting system.
 
@@ -9,25 +9,11 @@ This project is ideal for **college submissions, internships, resumes, and portf
 ---
 
 ## ⭐ Features
-## 🖼 Screenshots
-
-### 🏠 Home Page
-<img width="1901" height="1036" alt="home" src="https://github.com/user-attachments/assets/a3d5f858-2e1a-49d3-9e60-6d4c50fece03" />
-
-
-### 📅 Events Page
-
-
-
-
-
 
 ### 🗓️ Event Management
 - Add, view, update, and delete events  
 - Display allocated resources for each event  
-- Organized event table with centered alignment
-![Events Screenshot](<img width="1907" height="1014" alt="image" src="https://github.com/user-attachments/assets/e5e8e404-ead9-460c-bc0e-493be967e104" />)
-
+- Organized event table with centered alignment  
 
 ### 🧰 Resource Management
 - Add resources (Lab, Room, Projector, Instructor, etc.)  
@@ -54,14 +40,10 @@ This project is ideal for **college submissions, internships, resumes, and portf
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | HTML, CSS |
-| Backend | Flask (Python) |
-| Database | MySQL |
-| Template Engine | Jinja2 |
 
----
+-Frontend: **HTML, CSS 
+-Backend :**Flask (Python) 
+-Database : **MySQL 
 
 ## 📋 Prerequisites
 
@@ -69,66 +51,99 @@ Install:
 
 - Python 3.10+
 - MySQL Server
-- pip
-
----
+- pip (for installing Python packages)
 
 ## 📦 Installation
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/<your-username>/Event-Management
+git clone https://github.com/Krishnakanthkn-08/Event-Management
 cd Event-Management
 2️⃣ Install Dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
 3️⃣ Create MySQL Database
+sql
+Copy code
 CREATE DATABASE event_system;
-
 4️⃣ Configure DB Connection
-
 In db.py:
 
+python
+Copy code
 db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="yourpassword",
     database="event_system"
 )
+### Running the App
 
-▶️ Running the App
+1. Run the Flask app:
+
 python app.py
+Visit http://127.0.0.1:5000/ in your browser to start using the app.
+
+Application Structure
+app.py: Main Flask application file.
+
+templates/: Directory containing HTML templates.
+
+home.html: Home page of the app.
+events.html: Page for managing events.
+add_event.html: Page for adding new events.
+edit_event.html: Page for editing existing events.
+resources.html: Page for managing resources.
+add_resource.html: Page for adding new resources.
+edit_resource.html: Page for updating resources.
+allocate.html: Page for allocating resources.
+edit_allocation.html: Page for editing allocations.
+report.html: Page showing resource utilization reports.
+static/: Directory containing static files like CSS and images.
+
+###Event Management
+Add Event: Add new events with title, description, start time, and end time.
+Update Event: Edit details of an existing event.
+View Events: View all created events with allocated resources.
+Delete Event: Remove any event.
+<img width="1907" height="1014" alt="View event" src="https://github.com/user-attachments/assets/d23c11bd-a5c7-4400-ba67-f76e361e6e48" />
 
 
-Then open:
+###Resource Management
+Add Resource: Add new resources (labs, rooms, projectors, instructors…)
+Update Resource: Edit existing resource details.
+View Resources: View all resources.
+Delete Resource: Remove a resource after clearing allocations.
+<img width="1919" height="1021" alt="view source" src="https://github.com/user-attachments/assets/096ab5d3-3a7a-4459-affa-ccb546f58e0d" />
 
-👉 http://127.0.0.1:5000/
+
+###Resource Allocation
+Add Allocation: Allocate a resource to an event.
+Conflict Detection: Prevents overlapping bookings.
+Update Allocation: Change allocated resource or event.
+View Allocations: View all event-resource allocations.
+<img width="1911" height="964" alt="allocate resouce" src="https://github.com/user-attachments/assets/c32df648-3b2d-4ea2-905b-0ed37838b9fb" />
 
 
 
-🖼 Screenshots
+###Report
+Shows total usage duration of each resource.
+Displays upcoming bookings.
+Helps identify most-used resources.
+<img width="1891" height="1029" alt="Final report" src="https://github.com/user-attachments/assets/91314623-44d5-4534-9f21-3824fa371b18" />
 
-Below is one screenshot you shared.
-You can add more later by uploading them.
 
-🏠 Home Page
 
-(Add more screenshots inside static/images/ and update here.)
+>>>>>Future Improvements
+JWT Authentication: Implement secure login system for admin and staff.
+Role-based Access Control (RBAC): Different permissions based on roles.
+Advanced Reports: Weekly, monthly, and yearly analytics.
+Calendar View: Event scheduling using a calendar interface.
+Export to Excel/PDF: Export reports and event data.
 
-🔮 Future Improvements
+###License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Login authentication
 
-Admin & staff roles
 
-Calendar event viewer
-
-Export reports to PDF/Excel
-
-Dashboard with charts
-
-Dark mode UI
-
-📄 License
-
-This project is licensed under the MIT License.

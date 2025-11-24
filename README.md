@@ -25,8 +25,7 @@ This project is ideal for **college submissions, internships, resumes, and portf
 - Add, view, update, and delete events  
 - Display allocated resources for each event  
 - Organized event table with centered alignment
-![Events Screenshot](<img width="1907" height="1014" alt="image" src="https://github.com/user-attachments/assets/e5e8e404-ead9-460c-bc0e-493be967e104" />
-)
+![Events Screenshot](<img width="1907" height="1014" alt="image" src="https://github.com/user-attachments/assets/e5e8e404-ead9-460c-bc0e-493be967e104" />)
 
 
 ### 🧰 Resource Management
